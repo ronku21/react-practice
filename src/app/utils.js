@@ -49,7 +49,6 @@ export function saveUser(value){
 
 export function saveObject (key, value) {
 	if(window && window.localStorage) {
-		console.log(window && window.localStorage,key,value,"xdfzsdfsdfsdfsdf")
 		window.localStorage.saveObject(key, value);
 	}
 }
@@ -110,10 +109,13 @@ export function apiPost (endPoint, data, headers = {}) {
   return apiReq(generateUrl(endPoint), data, 'post', headers);
 }
 
+<<<<<<< HEAD
 export function apiPostTask (endPoint, data, headers = {}) {
   return apiReq(generateUrlForgot(endPoint), data, 'post', headers);
 }
 
+=======
+>>>>>>> 30f78b07cfa1557522355fd3fc8f9d1c8526ec4c
 export function apiDelete (endPoint, data, headers = {}) {
   return apiReq(generateUrl(endPoint), data, 'delete', headers);
 }

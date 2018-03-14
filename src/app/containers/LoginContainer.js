@@ -14,7 +14,7 @@ let initialUser = {
 export default class LoginContainer extends Component{
     constructor(props){
         super(props);
-        
+
         this.state = {
             user: initialUser,
             errors: {},
@@ -24,6 +24,7 @@ export default class LoginContainer extends Component{
     }
 
     componentDidMount() {
+        // actions.getCategories();
     }
 
 

@@ -4,11 +4,11 @@ let initState = {
 	fetching: false,
  	categories: [],
 	user: {},
-	userProfile:{}
 }
 
 
 export default function(state = initState, action){
+
 	switch (action.type) {
 
 		case types.GET_CATEGORIES :
