@@ -1,0 +1,59 @@
+.textcss {
+	background-image: url('https://newevolutiondesigns.com/images/freebies/black-wallpaper-10.jpg');
+	background-size: 1370px 100%;
+    background-repeat: no-repeat;
+    height:100vh;
+
+}
+
+.registerImage {
+	width: 31%;
+    margin-top: 75px;
+    margin-bottom: 20px;
+	margin-left: 198px;
+}
+
+a:focus, a:hover {
+    color: #ff8f57;
+    text-decoration: underline;
+}
+
+a{
+    color: #ff9600;
+    text-decoration: underline
+}
+
+.formgroup .modal-body {
+    display: inline-block;
+    width: 100%;
+}
+.formgroup .modal-footer {
+    display: inline-block;
+    width: 100%;
+	clear: both;
+}
+
+.h3, h3 {
+    font-size: 51px;
+    margin-top: 136px;
+	color: rgb(255, 255, 255)
+}
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.userProfileCss{
+	width: 176px;
+    margin-top: 126px;
+    margin-left: 215px;
+}
+
+.alertCss{
+	margin-left: 193px;
+	margin-right: 257px;
+	text-align-last: auto
+}
