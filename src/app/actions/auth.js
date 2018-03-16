@@ -5,8 +5,13 @@ import {
 	RegisterAPI,
 	LoginAPI,
 	ForgotAPI,
-	GetUserProfile
+	GetUserProfile,
+	changePasswordAPI
 } from '../api/auth';
+import {
+	updateProfileAPI,
+	updateProfilePicAPI
+} from '../api/user';
 
 const {dispatch} = store;
 
@@ -97,7 +102,7 @@ const registerUser = (payload) => {
 			  type:FORGOT_PASSWORD_FAILED
 		  })
 
-		  return response(err)
+		  return rej(err)
 	 })
    )
  }
@@ -118,15 +123,83 @@ const registerUser = (payload) => {
 		  dispatch({
 			  type:types.GET_USER_PROFILE_FAILED
 		  })
-		  return response(err)
+		  return rej(err)
 	  })
    )
  }
+
+ const updateProfileUser = (payload) => {
+    dispatch({
+		type:types.UPDATE_USER_PROFILE
+	})
+
+	return new Promise((response,rej) => updateProfileAPI(payload)
+	.then(res => {
+		   dispatch({
+			   type:types.UPDATE_USER_PROFILE_SUCCESS,
+			   payload:res
+		   })
+		   return response(res)
+	  }).catch(err => {
+		 dispatch({
+			 type:types.UPDATE_USER_PROFILE_FAILED
+		 })
+		 return rej(err)
+	 })
+  )
+}
+
+
+const updateProfilePicUser = (payload) => {
+	dispatch({
+		type:types.UPDATE_USER_PROFILE_PIC
+	})
+
+	return new Promise((response,rej) => updateProfilePicAPI(payload)
+	.then(res => {
+         dispatch({
+			 type:types.UPDATE_USER_PROFILE_SUCCESS,
+			 payload:res
+		 })
+         return response(res)
+    }).catch(err => {
+		dispatch({
+			type:types.UPDATE_USER_PROFILE_SUCCESS,
+		})
+		return rej(err)
+	})
+  )
+}
+
+const changePasswordUser = (payload) => {
+    dispatch({
+		type:types.CHANGE_USER_PASSWORD
+	})
+
+	return new Promise((response,rej) => changePasswordAPI(payload)
+     .then(res => {
+		 dispatch({
+            type:types.CHANGE_USER_PASSWORD_SUCCESS,
+			payload:res
+		 })
+		    return response(res)
+	 }).catch(err => {
+		 dispatch({
+			 type:types.CHANGE_USER_PASSWORD_FAILED
+		 })
+
+		 return rej(err);
+	 })
+   )
+}
 
 module.exports = {
   getCategories,
   registerUser,
   loginUser,
   forgotPassword,
-  getUserProfile
+  getUserProfile,
+  updateProfileUser,
+  updateProfilePicUser,
+  changePasswordUser
 }

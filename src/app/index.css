@@ -6,13 +6,26 @@
 
 }
 
+.profileCss{
+	background-image: url('https://newevolutiondesigns.com/images/freebies/black-wallpaper-10.jpg');
+	background-size: 1370px 100%;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+.editProfileCss{
+	font-size: 52px;
+    margin-top: 35px;
+    color: rgb(255, 255, 255);
+}
+
 .registerImage {
 	width: 31%;
     margin-top: 75px;
     margin-bottom: 20px;
 	margin-left: 198px;
 }
-<<<<<<< HEAD
+
 
 a:focus, a:hover {
     color: #ff8f57;
@@ -58,5 +71,31 @@ ol, ul {
 	margin-right: 257px;
 	text-align-last: auto
 }
-=======
->>>>>>> 30f78b07cfa1557522355fd3fc8f9d1c8526ec4c
+
+.alert_box {
+    margin: 24px 0 0;
+}
+.btn-edit button.btn.btn-default {
+    border: none;
+    background: transparent;
+    margin-top: -6px;
+    margin-right: -10px;
+}
+
+.wellSize {
+    margin-top: 41px;
+    padding: 25px;
+    margin-left: -82px;
+    margin-right: 158px;
+    text-align: -webkit-left;
+}
+
+.imageCss{
+   width: 252px;
+}
+
+.editProfileCss {
+    font-size: 43px;
+    margin-top: 12px;
+    color: #ff9a00;
+}

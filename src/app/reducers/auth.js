@@ -4,6 +4,7 @@ let initState = {
 	fetching: false,
  	categories: [],
 	user: {},
+	userProfile:{}
 }
 
 

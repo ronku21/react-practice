@@ -3,5 +3,7 @@ export Login from './Login';
 export ForgotPassword from './ForgotPassword';
 export Header from './Header';
 export Home from './Home';
+export Profile from './Profile';
+export ChangePassword from './ChangePassword';
 export InputField from './common/InputField';
 export FormButton from './common/FormButton';

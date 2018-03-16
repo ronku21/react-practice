@@ -65,6 +65,9 @@ export default class LoginContainer extends Component{
                 localStorage.setItem('user',JSON.stringify(res.resp));
                 swal("Success",res.message,"success");
                 this.setState({ user: initialUser });
+                setTimeout(function() {
+                    this.props.history.push('/home')
+                }.bind(this),2000);
             }else{
                swal("Oops", res.message, "error");
             }

@@ -1,7 +1,8 @@
 import * as auth from './auth';
-// import * as register from './register';
+import * as user from './user';
 
 
 export default {
 	...auth,
+	...user
 }
